@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_dashboard_white_36dp"
+        android:id="@+id/shop"
+        android:icon="@drawable/ic_shopping_cart_white_32dp"
         app:showAsAction="ifRoom"
-        android:title="Compose">
+        android:title="shop">
     </item>
 </menu>
