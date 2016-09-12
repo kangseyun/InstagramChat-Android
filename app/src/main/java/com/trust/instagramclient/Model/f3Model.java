@@ -7,7 +7,12 @@ import android.widget.ImageView;
  */
 public class f3Model {
     private String title;
-    private ImageView profile;
+    private int profile;
+
+    public f3Model(String title, int profile) {
+        this.title = title;
+        this.profile = profile;
+    }
 
     public String getTitle() {
         return title;
@@ -17,11 +22,11 @@ public class f3Model {
         this.title = title;
     }
 
-    public ImageView getProfile() {
+    public int getProfile() {
         return profile;
     }
 
-    public void setProfile(ImageView profile) {
+    public void setProfile(int profile) {
         this.profile = profile;
     }
 }
