@@ -30,12 +30,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:background="?attr/colorPrimary"
-        android:layout_margin="10dp"
-        app:backgroundTint="?attr/colorPrimary"
-        android:src="@android:drawable/ic_dialog_dialer"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="?attr/colorPrimary"
+            android:layout_margin="10dp"
+            app:backgroundTint="?attr/colorPrimary"
+            android:src="@android:drawable/ic_input_add"/>
 </android.support.design.widget.CoordinatorLayout>
