@@ -3,12 +3,13 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:layout_marginTop="5dp"
     android:background="#BDBDBD">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="#FFFFFF">
+        android:layout_width="wrap_content"
+        android:layout_height="69.5dp"
+        android:layout_weight="1"
+        android:paddingTop="3dp"
+        android:background="#F5F5F5">
         <ImageView
             android:layout_width="70dp"
             android:padding="7dp"
@@ -18,18 +19,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingLeft="5dp"
             android:layout_margin="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:text="강세윤"/>
             <TextView
+                android:paddingTop="3dp"
                 android:id="@+id/f3_item_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="안녕하세요?"/>
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="69.5dp"
+        android:background="#F5F5F5"
+        android:layout_width="70dp">
+        <TextView
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="10dp"
+            android:text="10:28 PM"/>
     </LinearLayout>
 </LinearLayout>

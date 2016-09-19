@@ -1,6 +1,7 @@
 package com.trust.instagramclient.Activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,14 +10,17 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.trust.instagramclient.Adapter.Pager;
 import com.trust.instagramclient.R;
 
-public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener, ViewPager.OnPageChangeListener{
+public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener, ViewPager.OnPageChangeListener, View.OnClickListener{
     private ViewPager viewpager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
+    private FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +39,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout = (TabLayout) findViewById(R.id.main_tablayout);
         tabLayout.setOnTabSelectedListener(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        fab = (FloatingActionButton) findViewById(R.id.main_fab);
+        fab.setOnClickListener(this);
     }
-
 
     void setToolbar() {
         toolbar.setTitle("인스타그램");
@@ -101,6 +106,17 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.main_fab:
+                Intent i = new Intent(MainActivity.this, chatActivity.class);
+                startActivity(i);
+                break;
         }
     }
 }

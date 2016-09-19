@@ -1,14 +1,18 @@
 package com.trust.instagramclient.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.trust.instagramclient.Activity.chatActivity;
+import com.trust.instagramclient.RecyclerItemClickListener;
 import com.trust.instagramclient.Adapter.f3Adapter;
 import com.trust.instagramclient.Model.f3Model;
 import com.trust.instagramclient.R;
@@ -37,6 +41,19 @@ public class Fragment3 extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new f3Adapter(getUserInformation(), context);
         mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(context, mRecyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        // do whatever
+                        Intent i = new Intent(view.getContext(), chatActivity.class);
+                        startActivity(i);
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        // do whatever
+                    }
+                })
+        );
         return view;
     }
 
