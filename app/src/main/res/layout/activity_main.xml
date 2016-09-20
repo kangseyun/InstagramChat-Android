@@ -33,12 +33,13 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/main_fab"
+            android:id="@+id/main_fab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:background="?attr/colorPrimary"
             android:layout_margin="10dp"
+            android:visibility="gone"
             app:backgroundTint="?attr/colorPrimary"
-            android:src="@android:drawable/ic_input_add"/>
+            android:src="@drawable/ic_add_box_white_36dp"/>
 </android.support.design.widget.CoordinatorLayout>
