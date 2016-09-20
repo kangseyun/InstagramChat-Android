@@ -50,14 +50,7 @@ public class Fragment1 extends Fragment {
         userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
         userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
         userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
-        userList.add(new f1Model("강세윤", R.drawable.ic_face_black_36dp));
+
         return userList;
     }
 

@@ -41,19 +41,19 @@ public class Fragment3 extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new f3Adapter(getUserInformation(), context);
         mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(context, mRecyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        // do whatever
-                        Intent i = new Intent(view.getContext(), chatActivity.class);
-                        startActivity(i);
-                    }
-
-                    @Override public void onLongItemClick(View view, int position) {
-                        // do whatever
-                    }
-                })
-        );
+//        mRecyclerView.addOnItemTouchListener(
+//                new RecyclerItemClickListener(context, mRecyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+//                    @Override public void onItemClick(View view, int position) {
+//                        // do whatever
+//                        Intent i = new Intent(view.getContext(), chatActivity.class);
+//                        startActivity(i);
+//                    }
+//
+//                    @Override public void onLongItemClick(View view, int position) {
+//                        // do whatever
+//                    }
+//                })
+//        );
         return view;
     }
 
