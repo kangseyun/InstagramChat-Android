@@ -42,4 +42,14 @@
             android:visibility="gone"
             app:backgroundTint="?attr/colorPrimary"
             android:src="@drawable/ic_add_box_white_36dp"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/main_fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="?attr/colorPrimary"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            app:backgroundTint="?attr/colorPrimary"
+            android:src="@drawable/ic_add_box_white_36dp"/>
 </android.support.design.widget.CoordinatorLayout>

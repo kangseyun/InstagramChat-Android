@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     private ViewPager viewpager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
-    private FloatingActionButton fab3;
+    private FloatingActionButton fab2, fab3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout = (TabLayout) findViewById(R.id.main_tablayout);
         tabLayout.setOnTabSelectedListener(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         fab3 = (FloatingActionButton) findViewById(R.id.main_fab3);
         fab3.setOnClickListener(this);
+        fab2 = (FloatingActionButton) findViewById(R.id.main_fab3);
+        fab2.setOnClickListener(this);
+
     }
 
     void setToolbar() {
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
     void setTabLayout() {
         tabLayout.addTab(tabLayout.newTab().setText("친구"));
-        tabLayout.addTab(tabLayout.newTab().setText("지역"));
+        tabLayout.addTab(tabLayout.newTab().setText("담벼락"));
         tabLayout.addTab(tabLayout.newTab().setText("대화"));
 
         Pager adapter = new Pager(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -92,12 +96,15 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         switch (position) {
             case 0:
                 fab3.hide();
+                fab2.hide();
                 break;
             case 1:
                 fab3.hide();
+                fab2.show();
                 break;
             case 2:
                 fab3.show();
+                fab2.hide();
                 break;
             default:
                 break;
